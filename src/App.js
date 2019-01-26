@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+
+const Title = styled.h1`
+  font-size: 3em;
+  font-family: open sans;
+`
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          Hello world!
+        <header>
+          <Title>cool ascii app</Title>
         </header>
-      </div>
     );
   }
 }
