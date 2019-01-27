@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import Header from './Header';
-import EmotionButton from './EmotionButton';
+import Navigation from './Navigation';
+
+const MainContainer = styled.div`
+  width: 100%;
+  height: auto;
+  position: relative;
+`
 
 class App extends Component {
   render() {
     return (
-      <div className="container">
+      <MainContainer>
         <Header title='cool ascii app'/>
-        <EmotionButton emotion='happy'/>
-        <EmotionButton emotion='sad'/>
-        <EmotionButton emotion='neutral'/>
-        <EmotionButton emotion='angry'/>
-        <EmotionButton emotion='suprised'/>
-      </div>
+        <Navigation/>
+      </MainContainer>
     );
   }
 }
