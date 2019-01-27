@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import EmotionButton from './EmotionButton';
+import AboutButton from './AboutButton';
 
 const NavBar = styled.div`
   display: flex;
@@ -19,6 +20,7 @@ class Navigation extends Component {
         <EmotionButton emotion='neutral'/>
         <EmotionButton emotion='angry'/>
         <EmotionButton emotion='suprised'/>
+        <AboutButton/>
       </NavBar>
     )
   }
