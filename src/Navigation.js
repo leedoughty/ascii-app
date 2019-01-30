@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import EmotionButton from './EmotionButton';
 import AboutButton from './AboutButton';
+import {
+  Link
+} from 'react-router-dom';
 
 const NavBar = styled.div`
   display: flex;
@@ -20,7 +23,7 @@ class Navigation extends Component {
         <EmotionButton emotion='neutral'/>
         <EmotionButton emotion='angry'/>
         <EmotionButton emotion='suprised'/>
-        <AboutButton/>
+        <Link to="/about"><AboutButton/></Link>
       </NavBar>
     )
   }
