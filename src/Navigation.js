@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import EmotionButton from './EmotionButton';
 import AboutButton from './AboutButton';
-import {
-  Link
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const NavBar = styled.div`
   display: flex;
