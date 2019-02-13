@@ -10,7 +10,7 @@ const Button = styled.button`
 class EmotionButton extends Component {
   render() {
     return (
-      <Button>
+      <Button onClick={() => this.props.onClick(this.props.emotion)}>
         {this.props.emotion}
       </Button>
     )

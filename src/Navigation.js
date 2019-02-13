@@ -16,11 +16,11 @@ class Navigation extends Component {
   render() {
     return (
       <NavBar>
-        <EmotionButton emotion='happy'/>
-        <EmotionButton emotion='sad'/>
-        <EmotionButton emotion='neutral'/>
-        <EmotionButton emotion='angry'/>
-        <EmotionButton emotion='suprised'/>
+        <EmotionButton onClick={this.props.onClick} emotion='happy'/>
+        <EmotionButton onClick={this.props.onClick} emotion='sad'/>
+        <EmotionButton onClick={this.props.onClick} emotion='neutral'/>
+        <EmotionButton onClick={this.props.onClick} emotion='angry'/>
+        <EmotionButton onClick={this.props.onClick} emotion='suprised'/>
         <Link to="/about"><AboutButton/></Link>
       </NavBar>
     )
