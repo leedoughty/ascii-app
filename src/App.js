@@ -47,21 +47,19 @@ class App extends Component {
     });
   }
 
-
-
   render() {
+    const allTheAsciis = {
+      happy: happyAsciis,
+      sad: sadAsciis
+  }
+  
     return (
       <Router>
         <MainContainer>
           <Header title='cool ascii app'/>
           <Navigation onClick={this.onClick}/>
           <FlexContainer>
-          {this.state.currentEmotion === 'happy' && happyAsciis.map((item, i) => (
-            <AsciiContainer key={i}>{item}</AsciiContainer>
-          ))}
-          {this.state.currentEmotion === 'sad' && sadAsciis.map((item, i) => (
-            <AsciiContainer key={i}>{item}</AsciiContainer>
-          ))}
+          {allTheAsciis[this.state.currentEmotion].map((item, i) => (<AsciiContainer key={i}>{item}</AsciiContainer>))}
           </FlexContainer>
           <Route path="/about" component={About}/>
         </MainContainer>
