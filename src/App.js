@@ -7,6 +7,7 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
+import asciis from './asciis';
 
 const MainContainer = styled.div`
   width: 100%;
@@ -21,6 +22,9 @@ class App extends Component {
         <MainContainer>
           <Header title='cool ascii app'/>
           <Navigation/>
+          {asciis.map(item => (
+            <pre>{item}</pre>
+          ))};
           <Route path="/about" component={About}/>
         </MainContainer>
       </Router>
