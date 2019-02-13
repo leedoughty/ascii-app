@@ -41,7 +41,9 @@ class App extends Component {
   }
 
   onClick = (emotion) => {
-    console.log('clicked', emotion);
+    this.setState({
+      currentEmotion: emotion
+    });
   }
 
   render() {
@@ -54,6 +56,7 @@ class App extends Component {
           {asciis.map((item, i) => (
             <AsciiContainer key={i}>{item}</AsciiContainer>
           ))}
+          {this.state.currentEmotion === 'happy' && <p>Hi i'm happy</p>}
           </FlexContainer>
           <Route path="/about" component={About}/>
         </MainContainer>
