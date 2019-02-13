@@ -1,4 +1,4 @@
-const asciis = [
+const happyAsciis = [
   [`
 ☆┌─┐   ─┐☆
 　│▒│ /▒/
@@ -58,4 +58,4 @@ const asciis = [
     `]
 ]
 
-export default asciis;
+export default happyAsciis;

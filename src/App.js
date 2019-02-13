@@ -7,7 +7,8 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
-import asciis from './asciis';
+import happyAsciis from './happyAsciis';
+import sadAsciis from './sadAsciis';
 
 const MainContainer = styled.div`
   width: 100%;
@@ -46,6 +47,8 @@ class App extends Component {
     });
   }
 
+
+
   render() {
     return (
       <Router>
@@ -53,10 +56,12 @@ class App extends Component {
           <Header title='cool ascii app'/>
           <Navigation onClick={this.onClick}/>
           <FlexContainer>
-          {asciis.map((item, i) => (
+          {this.state.currentEmotion === 'happy' && happyAsciis.map((item, i) => (
             <AsciiContainer key={i}>{item}</AsciiContainer>
           ))}
-          {this.state.currentEmotion === 'happy' && <p>Hi i'm happy</p>}
+          {this.state.currentEmotion === 'sad' && sadAsciis.map((item, i) => (
+            <AsciiContainer key={i}>{item}</AsciiContainer>
+          ))}
           </FlexContainer>
           <Route path="/about" component={About}/>
         </MainContainer>
