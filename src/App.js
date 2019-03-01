@@ -52,7 +52,7 @@ class App extends Component {
       happy: happyAsciis,
       sad: sadAsciis
   }
-  
+
     return (
       <Router>
         <MainContainer>
